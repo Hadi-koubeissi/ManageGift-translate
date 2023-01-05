@@ -155,7 +155,7 @@ module.exports = {
 		giveawaycmd: `Giveaway commands - (8)`,
 		configcmd: `Config commands - (4)`,
 		infocmd: `Info commands - (4)`,
-		ownerbot: `Owner bot commands - (2)`,
+		ownerbot: `Owner bot commands - (1)`,
 		cancel: 'Back to the home page',
 		link: `${ e.link } Links:`,
 		web: `${ e.link } ManageGift's Website`,
@@ -192,10 +192,16 @@ module.exports = {
 	infocmd: {
 		infotit: `${ e.page } Categories: \`Info\``,
 		infofind: '```fix\nHere you can find all Info Commands:```',
-		invitee: `> \`Get the bot's invitation link\``,
-		pingg: `> \`Show the bot's ping\``,
-		statss: `> \`Show bot's statistics\``,
+		helpp: `> \`Get the bot command\``,
+		invitee: `> \`Get the bot invitation link\``,
+		pingg: `> \`Show the bot ping\``,
+		statss: `> \`Show bot statistics\``,
 		configg: `> \`Display the current configuration of the bot\``
+	},
+	owner: {
+		tit: `${ e.page } Categories: \`Owner\``,
+		ownerfind: '```fix\nHere you can find all Owner Commands:```',
+		blacklistt: `> \`Add or remove or get list, users & guilds in blacklist\``
 	},
 	otherUser: `${ e.error } You cannot **edit**, **end** or **delete** this \`giveaway\`, since you are not the \`host\`!`,
 	lang: { perms: `${ e.error } You do not have permission \`MANAGE_MESSAGES\`` },
