@@ -4,14 +4,14 @@ const {prefix, owner} = require('../config.js'), emojis = require('../emojis.jso
 module.exports = {
 	create: {
 		EXAMPLES: `/create duration:1m winners:1 prize:Nitro \n /create duration:1m winners:1 prize:Nitro channel:#general \n /create duration:1m winners:1 prize:Nitro required_role:@Vip`,
-		perms: `${ e.error } You do not have permission \`MANAGE_MESSAGES\`, You can set specify role to create & manage giveaways from your guild By using the following command \`/setrole\`!.`,
-		duration: `${ e.error } Type a valid \`time\` please!\n> Ex: \`1d (1 day)\`, \`1h (1 hour)\`, \`1m (1 minute)\`!`,
-		argswinners: `${ e.error } Type the \`number of winners!\`\n> Ex: \`1\`, \`2\` **...** \`10\` `,
-		prizee: `${ e.error } Please put a \`prize\` less **50 word**`,
-		good: `${ e.success } **Done, The \`giveaway\` has been \`created\` successfully**`,
-		errorlink: `${ e.error } Please enter a valid **LINK OF GUILD** or \`something went wrong\``,
-		notinserver: `${ e.error } Hey! I am not in this **server**, you can \`add me\` by **[clicking here](https://discord.com/api/oauth2/authorize?client_id=598564396691750933&permissions=8&scope=applications.commands%20bot)**`,
-		view: `Giveaway Link:`
+		perms: `${ e.error } ليس لديك صَلاحية \`MANAGE_MESSAGES\`، يمكنك تحديد رتبة لإنشاء وإدارة هداياك في سيرفرك باستخدام الأمر التالي \`/setrole\`!.`,
+		duration: `${ e.error } يرجى إدخال وقت \`time\` صحيح!\n> مثال: \`1d (1 day)\`, \`1h (1 hour)\`, \`1m (1 minute)\`!`,
+		argswinners: `${ e.error } اكتب \`عدد الفائزين!\`\n> مثال: \`1\`, \`2\` **...** \`10\` `,
+		prizee: `${ e.error } Please put a \`prize\` less **50 letter**`,
+		good: `${ e.success } **تم إنشاء هبتك بنجاح!**`,
+		errorlink: `${ e.error } الرجاء إدخال **رابط خادم (سيرفر)** صالح أو \`ربما هنالك خطأ ما\`.`,
+		notinserver: `${ e.error } مرحباً! أنا لست في هذا **الخادم (السيرفر)**، يمكنك \`إضافتي\` عن طريق **[النقر هنا](https://discord.com/api/oauth2/authorize?client_id=598564396691750933&permissions=8&scope=applications.commands%20bot)**`,
+		view: `رابط الهبة:`
 	},
 	drop: {
 		EXAMPLES: `/drop winners:1 prize:Steam Gift card \n /drop winners:1 prize:Steam Gift card channel:#general`,
