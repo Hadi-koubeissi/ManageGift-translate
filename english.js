@@ -11,7 +11,7 @@ module.exports = {
 		perms: `${e.error} You do not have permission \`MANAGE_MESSAGES\`, You can set specify role to create & manage giveaways from your guild By using the following command \`/setrole\`!.`,
 		duration: `${e.error} Type a valid \`time\` please!\n> Ex: \`1d (1 day)\`, \`1h (1 hour)\`, \`1m (1 minute)\`!`,
 		argswinners: `${e.error} Type the \`number of winners!\`\n> Ex: \`1\`, \`2\` **...** \`10\` `,
-		prizee: `${e.error} Please put a \`prize\` less **50 word**`,
+		prizee: `${e.error} Please put a \`prize\` less **50 letter**`,
 		good: `${e.success} **Done, The \`giveaway\` has been \`created\` successfully**`,
 		errorlink: `${e.error} Please enter a valid **LINK OF GUILD** or \`something went wrong\``,
 		notinserver: `${e.error} Hey! I am not in this **server**, you can \`add me\` by **[clicking here](https://discord.com/api/oauth2/authorize?client_id=598564396691750933&permissions=8&scope=applications.commands%20bot)**`,
