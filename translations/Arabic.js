@@ -9,7 +9,7 @@ module.exports = {
 		argswinners: `${ e.error } اكتب \`عدد الفائزين!\`\n> مثال: \`1\`, \`2\` **...** \`10\` `,
 		prizee: `${ e.error } الرجاء وضع \`جائزة\` لا تتضمن أكثر من **50 حرف**`,
 		good: `${ e.success } **تم إنشاء هبتك بنجاح!**`,
-		errorlink: `${ e.error } الرجاء إدخال **رابط خادم (سيرفر)** صالح أو \`ربما هنالك خطأ ما\`.`,
+		errorlink: `${ e.error }  الرجاء إدخال **رابط خادم (سيرفر)** صالح أو \`ربما هنالك خطأ ما\`.`,
 		notinserver: `${ e.error } مرحباً! أنا لست في هذا **الخادم (السيرفر)**، يمكنك \`إضافتي\` عن طريق **[النقر هنا](https://discord.com/api/oauth2/authorize?client_id=598564396691750933&permissions=8&scope=applications.commands%20bot)**`,
 		view: `رابط الهبة:`
 	},
@@ -88,154 +88,155 @@ module.exports = {
 		approved1: `${ e.approved } تمت الموافقة على دخولك للسحب!`,
 		approved2: `**دخولك [لهذه الهدايا]({messageURL}) قد تمت الموافقة عليه!** \n \n > **لديك الآن فرصة للفوز! ${ e.bot_logo }**`,
 		denied1: `${ e.denied } | تم رفضك دخولك للسحب!`,
-		denied2: `**Your entry to [This Giveaway]({messageURL}) has been denied!** \n \n > **Please review the Giveaway Requirements!** ${ e.requirements }`,
-		dm1: `**Congratulations {winner}! ${ e.bot_logo }**`,
-		dm2: `・You Won ${ e.gift }:`,
-		dm3: `・Hosted By ${ e.host }:`,
-		winMessage: `${ e.bot_logo } | Congratulations, {winners}! You won **{this.prize}**!`
+		denied2: `**دخولك للسحب في [هذه الهبة]({messageURL}) قد تم رفضه!** \n \n > **الرجاء مراجعة متطلبات وشروط المشاركة في الهبة! ${ e.requirements }`,
+		dm1: `**تهانينا لـ {winner}! 
+${ e.bot_logo }**`,
+		dm2: `・أنت فزت ${ e.gift }:`,
+		dm3: `・بواسطة ${ e.host }:`,
+		winMessage: `${ e.bot_logo } | مبروك, {winners}! لقد فزت(م) **بـ{prize}!**`
 	},
 	setdm: {
 		EXAMPLES: `/setdm status:on \n /setdm status:off`,
-		doneon: `${ e.success } | direct winner message correctly activated${ e.online }!.`,
-		doneoff: `${ e.success } | direct winner message correctly deactivated${ e.dnd }!.`
+		doneon: `${ e.success } | تم تفعيل خاصية تنبيه الفائزين في الخاص${ e.online }!.`,
+		doneoff: `${ e.success } | تم إلغاء تفعيل خاصية تنبيه الفائزين في الخاص${ e.dnd }!.`
 	},
 	setmention: {
 		EXAMPLES: `/setmention status:on \n /setmention status:off`,
-		mon: `${ e.success } | setmention command correctly activated${ e.online }!.`,
-		moff: `${ e.success } | setmention command correctly deactivated${ e.dnd }!`
+		mon: `${ e.success } | تم تفعيل خاصية التنبيه الجماعي بـ(everyone) عند إنشاء الهبات${ e.online }!.`,
+		moff: `${ e.success } | تم إلغاء تفعيل خاصية التنبيه الجماعي بـ(everyone) عند إنشاء الهبات${ e.dnd }!`
 	},
 	setrole: {
 		EXAMPLES: `/setrole role role_value:@Manager \n /setrole status status_value:on \n /setrole status status_value:off`,
-		setrlebedore: `${ e.error } | Please choose a role before activating or deactivating it..`,
-		roledone: role => `${ e.success } | Role manager is set: ||<@&${ role.id }>||, And \`activated\``,
-		ron: `${ e.success } | Role manager correctly activated${ e.online }!`,
-		roff: `${ e.success } | Role manager correctly deactivated${ e.dnd }!`
+		setrlebedore: `${ e.error } | الرجاء اختيار رتبة قبل تفعيله أو تعطيله..`,
+		roledone: role => `${ e.success } | تم تعين الرتبة الآتية كمدير للهبات: ||<@&${ role.id }>||, و \`مفعل\``,
+		ron: `${ e.success } | تم تفعيل رتبة مدير الهبات${ e.online }!`,
+		roff: `${ e.success } | تم إلغاء تفعيل رتبة مدير الهبات${ e.dnd }!`
 	},
 	config: {
 		EXAMPLES: `/configuration`,
-		configuration: 'Configuration:',
-		status: `status: `,
-		language: `language ${ e.lang }`,
+		configuration: 'الإعدادات:',
+		status: `الحالة: `,
+		language: `اللغة ${ e.lang }`,
 		mentiont: `setmention ${ e.mention }`,
 		setdmt: `setdm ${ e.dm }`,
 		setrolet: `setrole ${ e.role }`,
-		setrolede: `role: `,
-		norole: `\`No role\``
+		setrolede: `الرتبة: `,
+		norole: `\`لا توجد رتبة\``
 	},
 	invite: {
 		EXAMPLES: `/invite`,
-		main: 'Hey, you want to invite our bot?',
-		disc: `> **You can invite our bot by pressing the \`Invite\` button below.**\n\n > **You can access the \`webiste\` links, \`support server\` and \`vote\`** \`\`\`through the buttons at the bottom\`\`\``
+		main: 'مرحبا، هل تريد دعوة البوت؟',
+		disc: `> * * يمكنك دعوة البوت بالضغط على زر \`دعوة\` أدناه. *\n\n > **يمكنك الوصول إلى روابط \`webiste\` ، \`سيرفر الدعم الفني\` و \`التصويت\`** \`\`\`من خلال الأزرار أدناه \`\`\``
 	},
 	ping: {
 		EXAMPLES: `/ping`,
-		pingmsg: (messagePing, apiPing, status) => `> **Status**: ${ status } \n > ${ e.ping } **Message ping**: \`${ messagePing }\` - ${ e.api } ** API ping**: \`${ apiPing }\``
+		pingmsg: (messagePing, apiPing, status) => `> **الحالة**: ${ status } \n > ${ e.ping } **/مدة إستجابة الرسائل**: \`${ messagePing }\` - ${ e.api } ** مدة إستجابة الـ API**: \`${ apiPing }\``
 	},
 	stats: {
 		EXAMPLES: `/stats`,
-		title: 'ManageGift\'s Information:',
-		creator: `${ e.owner } • __Creator:__`,
-		stats: `${ e.stats } • __Statistics:__`,
-		stat: '`Servers:`',
-		set: '`Users:`',
-		ver: `${ e.ver } • __Changelog:__`,
-		ram: `${ e.ram } • __RAM__`,
-		on: `${ e.online } • __Uptime__`,
-		startat: '**Started At**: ',
-		for: '**online for** ',
-		moreinfo: `${ e.info } • __MoreInfos:__`,
-		comd: '`Total Commands:`',
-		giv: '`All Giveaways:`',
-		acgiv: '`Active Giveaways:`'
+		title: 'معلومات حول ManageGift\'s:',
+		creator: `${ e.owner } • __المنشئ:__`,
+		stats: `${ e.stats } • __إحصائيات:__`,
+		stat: '`الخوادم:`',
+		set: '`المستخدمين:`',
+		ver: `${ e.ver } • __سجل التغييرات:__`,
+		ram: `${ e.ram } • __الرام__`,
+		on: `${ e.online } • __مدة التشغيل منذ آخر مرة__`,
+		startat: '**بدأت في**: ',
+		for: '**متصل منذ** ',
+		moreinfo: `${ e.info } • __المزيد من المعلومات:__`,
+		comd: '`مجموع الأوامر:`',
+		giv: '`عدد جميع الهبات:`',
+		acgiv: '`عدد الهبات النشطة:`'
 	},
 	help: {
 		EXAMPLES: `/help \n /help create \n /help ping`,
-		title: 'Help Documents Overview:',
-		disc: '• Here you can find all `ManageGift Commands` \n • Please select a `category` from below',
-		giveawaycmd: `Giveaway commands - (8)`,
-		configcmd: `Config commands - (4)`,
-		infocmd: `Info commands - (4)`,
-		ownerbot: `Owner bot commands - (1)`,
-		cancel: 'Back to the home page',
-		link: `${ e.link } Links:`,
-		web: `${ e.link } ManageGift's Website`,
-		inv: `${ e.add } Invite ManageGift's`,
-		vote: `${ e.vote } Vote For ManageGift's`,
-		sup: `${ e.supp } Join The Support Server`,
-		errcmd: `${ e.error } **Couldn't find command with that \`name\`**`,
-		cmd_title: cmd => `Help: ${ cmd }`,
-		cmd_usage: `${ e.usage } Usage:`,
-		cmd_examples: `${ e.example } Examples:`,
-		cmd_description: `${ e.description } Description:`,
-		cmd_categorie: `${ e.categorie } Group:`
+		title: 'نظرة عامة على مستندات المساعدة:',
+		disc: '• من هنا يمكنك رؤية جميع أوامر `ManageGift\'s Bot` \n • يرجى اختيار `قائمة` من خلال الزر أدناه',
+		giveawaycmd: `أوامر الهبات - (8)`,
+		configcmd: `أوامر الإعدادات - (4)`,
+		infocmd: `معلومات الأوامر - (4)`,
+		ownerbot: `أوامر مالك البوت - (1)`,
+		cancel: 'الرجوع إلى الصفحة الرئيسية',
+		link: `${ e.link } الروابط:`,
+		web: `${ e.link } موقع ManageGift's`,
+		inv: `${ e.add } دعوة ManageGift's`,
+		vote: `${ e.vote } التصويت لـ ManageGift's`,
+		sup: `${ e.supp } سيرفر الدعم الفني`,
+		errcmd: `${ e.error } **تعذر العثور على الأمر اسمه \`name\`**`,
+		cmd_title: cmd => `مساعدة: ${ cmd }`,
+		cmd_usage: `${ e.usage } الاستخدام:`,
+		cmd_examples: `${ e.example } أمثلة للأمر:`,
+		cmd_description: `${ e.description } الوصف:`,
+		cmd_categorie: `${ e.categorie } المجموعة:`
 	},
 	givcmd: {
-		givtit: `${ e.page } Categories: \`Giveaway\``,
-		givfind: '```fix\nHere you can find all Giveaway Commands:```**Required permissions:** \n `MANAGE_MESSAGES` or `Set Role`',
-		createe: `> \`Start a giveaway in your guild!\``,
-		dropee: `> \`Create a giveaway drop in your guild!\``,
-		deletee: `> \`Delete a giveaway in your guild!\``,
-		editt: `> \`Edit a giveaway in your guild!\``,
-		endd: `> \`End a giveaway in your guild!\``,
-		pausee: `> \`Pause a giveaway in your guild!\``,
-		rerolll: `> \` Choose new winner(s) of a giveaway in your guild!\``,
-		resumeee: `> \`resume a giveaway in your guild!\``
+		givtit: `${ e.page } الفئات: \`الهبات\``,
+		givfind: '```fix\nهنا يمكنك أن تجد جميع أوامر الهبات:```**الصلاحيات مطلوبة:** \n `MANAGE_MESSAGES` أو ` تحديد رتبة لإنشاء وإدارة الهبات`',
+		createe: `> \`ابدأ بإنشاء الهبات في خادمك!\``,
+		dropee: `> \`ابدأ بإنشاء هبات الـ DROP في خادمك!\``,
+		deletee: `> \`إحذف هبة في خادمك!\``,
+		editt: `> \`قم بتعديل الهبات في خادمك!\``,
+		endd: `> \`قم بإنهاء الهبات في خادمك!\``,
+		pausee: `> \`قم بإيقاف هبة في خادمك!\``,
+		rerolll: `> \` اختر الفائز(ة/ون) جدد لهبتك في خادمك!\``,
+		resumeee: `> \`قم بإستئناف هبة في خادمك!\``
 	},
 	cnfgcmd: {
-		cnfgtit: `${ e.page } Categories: \`Config\``,
-		cnfgfind: '```fix\nHere you can find all Config Commands:```**Required permissions:** \n `MANAGE_MESSAGES`',
-		setlangg: `> \`Change the bot's language in your guild!\``,
-		setdmm: `> \`Activate or Deactivate the winning dm message to the winner in your guild!\``,
-		setmentionn: `> \`Activate or Deactivate the started giveaway mention alert in your guild!\``,
-		setrolee: `> \`Activate or Deactivate the role manager in your guild!\``
+		cnfgtit: `${ e.page } الفئة: \`الإعدادات\``,
+		cnfgfind: '```fix\nهنا يمكنك أن تجد جميع أوامر الإعدادات:```**الصلاحيات مطلوبة:** \n `MANAGE_MESSAGES` أو ` تحديد رتبة لإنشاء وإدارة الهبات`',
+		setlangg: `> \`تغير لغة البوت في خادمك!\``,
+		setdmm: `> \`تفعيل أو إلغاء تفعيل خاصية تنبيه الفائز بالخاص في خادمك!\``,
+		setmentionn: `> \`تفعيل أو إلغاء تفعيل تنبيه الأعضاء بـ(everyone) أثناء إنشاء هبة في خادمك!\``,
+		setrolee: `> \`تفعيل أو إلغاء تفعيل رتبة الهبات في خادمك!\``
 	},
 	infocmd: {
-		infotit: `${ e.page } Categories: \`Info\``,
-		infofind: '```fix\nHere you can find all Info Commands:```',
-		helpp: `> \`Get the bot command\``,
-		invitee: `> \`Get the bot invitation link\``,
-		pingg: `> \`Show the bot ping\``,
-		statss: `> \`Show bot statistics\``,
-		configg: `> \`Display the current configuration of the bot\``
+		infotit: `${ e.page } الفئة: \`المعلومات\``,
+		infofind: '```fix\nمن هنا يمكنك رؤية جميع أوامر المعلومات:```',
+		helpp: `> \`احصل على أوامر البوت \``,
+		invitee: `> \`احصل على رابط دعوة البوت \``,
+		pingg: `> \`إظهار مدة استجابة البوت \``,
+		statss: `> \`إظهار إحصائيات البوت\``,
+		configg: `> \`عرض الإعدادات الحالية للبوت \``
 	},
 	owner: {
-		tit: `${ e.page } Categories: \`Owner\``,
-		ownerfind: '```fix\nHere you can find all Owner Commands:```',
-		blacklistt: `> \`Add or remove or get list, users & guilds in blacklist\``
+		tit: `${ e.page } الفئة: \`المالك\``,
+		ownerfind: '```إصلاح\nهنا يمكنك العثور على جميع أوامر المالك:```',
+		blacklistt: `> \`إضافة أو إزالة أو الحصول على قائمة، المستخدمين والخوادم في القائمة السوداء\``
 	},
-	otherUser: `${ e.error } You cannot **edit**, **end** or **delete** this \`giveaway\`, since you are not the \`host\`!`,
-	lang: { perms: `${ e.error } You do not have permission \`MANAGE_MESSAGES\`` },
-	lastchance: { content: `${ e.warning } **LAST CHANCE TO ENTER !** ${ e.warning }` },
+	otherUser: `${ e.error } لا يمكنك **تحرير**، **إنهاء** أو **حذف** هذه \`الهبة\`، بما أنك لست \`المستضيف\`!`,
+	lang: { perms: `${ e.error } ليس لديك صلاحية \`MANAGE_MESSAGES\`` },
+	lastchance: { content: `${ e.warning } **أخر فرصة لدخول في السحب!** ${ e.warning }` },
 	pauseoptions: {
-		content: `${ e.pause } **THIS GIVEAWAY IS PAUSED !** ${ e.pause }`,
-		autostart: autotime => `\`Auto Start After:\` ${ autotime }`
+		content: `${ e.pause } **تم توقيف هذه الهبة مؤقتا !** ${ e.pause }`,
+		autostart: autotime => `\`التشغيل التلقائي بعد:\` ${ autotime }`
 	},
 	already: {
-		enb: `${ e.afk } | An error occurred. This command may already be \`enabled\``,
-		dis: `${ e.afk } | An error occurred. This command may already be \`disabled\``
+		enb: `${ e.afk } | حدث خطأ. قد يكون هذا الأمر \`مفعل\``,
+		dis: `${ e.afk } | حدث خطأ. قد يكون هذا الأمر \`ملغى\` بالفعل`
 	},
-	selectmenu: { choose: `Please Choose a Giveaway` },
+	selectmenu: { choose: `الرجاء إخيار الهبة` },
 	collector: {
-		time: `${ e.timeout }**Time is out! try again.**`,
-		btntime: `Time is out!`
+		time: `${ e.timeout }**انتهى الوقت! حاول مرة أخرى.**`,
+		btntime: `إنتهى الوقت!`
 	},
 	cancel: {
-		option1: `Cancel`,
-		option2: `Cancel the selection`,
-		cancelled: `${ e.success } Cancelled`
+		option1: `إلغاء`,
+		option2: `إلغاء التحديد`,
+		cancelled: `${ e.success } ملغي`
 	},
 	cmd: {
-		cooldown: `${ e.error } | **You must wait \`4 second(s)\` ${ e.timeout } to be able to run this command again!**`,
-		owneronly: `${ e.error } | Only the owner of ManageGift can do these commands!`,
-		botperm: `${ e.error } | I don't have **\`Administrator\`** permission to execute this command.`
+		cooldown: `${ e.error } | **يجب عليك الانتظار \`4 ثواني/ثوانٍ\` ${ e.timeout } لتكون قادراً على تشغيل هذا الأمر مرة أخرى!**`,
+		owneronly: `${ e.error } | فقط مالك ManageGift يمكنه استخدام هذه الأوامر!`,
+		botperm: `${ e.error } | لا أملك صلاحية **\`Administrator\`** لتنفيذ هذا الأمر.`
 	},
 	blacklist: {
-		user: ureason => `${ e.warning } **You cannot use ManageGift Bot commands** \n \`\`\`Reason: ${ ureason }\`\`\` \n**If you think this is a mistake or something like that, do not hesitate and submit your objection in the [Support Server](https://discord.gg/7XfV4Md)**`,
-		guild: sreason => `${ e.warning } **This server is in the blacklist, you cannot use any command on it**\n \`\`\`Reason: ${ sreason }\`\`\` \n**If you think this is a mistake or something like that, do not hesitate and submit your objection in the [Support Server](https://discord.gg/7XfV4Md)**`
+		user: ureason => `${ e.warning } **لا يمكنك استخدام أوامر ManageGift** \n \`\`\`السبب: ${ ureason }\`\`\` \n**إذا كنت تعتقد أن هذا خطأ أو شيء من هذا القبيل، لا تتردد في تقديم اعتراضك في [خدمة الدعم الفني](https://discord.gg/7XfV4Md)**`,
+		guild: sreason => `${ e.warning } **هذا الخادم موجود في القائمة السوداء، لا يمكنك استخدام أي أمر فيه**\n \`\`\`السبب: ${ sreason }\`\`\` \n**إذا كنت تعتقد أن هذا خطأ أو شيء من هذا القبيل، لا تتردد في تقديم اعتراضك في [خدمة الدعم الفني](https://discord.gg/7XfV4Md)**`
 	},
-	enterserver: { thx: 'Thank you for adding me to your guild !' },
+	enterserver: { thx: 'شكرا لك على إضافتي في خادمك!' },
 	moved: {
-		update: `${ e.news } Update!`,
-		slash: 'From version `v4.0.0` onwards **ManageGift** moved to **slash commands**! Please type `/help` to see all commands!'
+		update: `${ e.news } تحديث!`,
+		slash: 'من الإصدار `v4.0.0` فصاعداً تم تحويل أوامر **ManageGift** إلى **أوامر السلاش**! الرجاء كتابة `/help` للتعرف على جميع الأوامر!'
 	}
 };
