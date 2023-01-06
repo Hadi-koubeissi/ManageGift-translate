@@ -3,8 +3,7 @@
 const {prefix, owner} = require('../config.js'), emojis = require('../emojis.json'), e = emojis;
 module.exports = {
 	create: {
-		EXAMPLES: `
-/create duration:1m winners:1 prize:نترو \n /create duration:1m winners:1 prize:نترو channel:#العام \n /create duration:1m winners:1 prize:نترو required_role:@الداعمين`,
+		EXAMPLES: `/create duration:1m winners:1 prize:نترو \n /create duration:1m winners:1 prize:نترو channel:#العام \n /create duration:1m winners:1 prize:نترو required_role:@الداعمين`,
 		perms: `${ e.error } ليس لديك صَلاحية \`MANAGE_MESSAGES\`، يمكنك تحديد رتبة لإنشاء وإدارة هداياك في سيرفرك باستخدام الأمر التالي \`/setrole\`!.`,
 		duration: `${ e.error } يرجى إدخال وقت \`time\` صحيح!\n> مثال: \`1d (1 day)\`, \`1h (1 hour)\`, \`1m (1 minute)\`!`,
 		argswinners: `${ e.error } اكتب \`عدد الفائزين!\`\n> مثال: \`1\`, \`2\` **...** \`10\` `,
