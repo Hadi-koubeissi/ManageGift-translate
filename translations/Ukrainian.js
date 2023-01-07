@@ -3,60 +3,60 @@
 const {prefix, owner} = require('../config.js'), emojis = require('../emojis.json'), e = emojis;
 module.exports = {
 	create: {
-		EXAMPLES: `/create duration:1m winners:1 prize:Nitro \n /create duration:1m winners:1 prize:Nitro channel:#general \n /create duration:1m winners:1 prize:Nitro required_role:@Vip`,
-		perms: `${ e.error } You do not have permission \`MANAGE_MESSAGES\`, You can set specify role to create & manage giveaways from your guild By using the following command \`/setrole\`!.`,
-		duration: `${ e.error } Type a valid \`time\` please!\n> Ex: \`1d (1 day)\`, \`1h (1 hour)\`, \`1m (1 minute)\`!`,
-		argswinners: `${ e.error } Type the \`number of winners!\`\n> Ex: \`1\`, \`2\` **...** \`10\` `,
-		prizee: `${ e.error } Please put a \`prize\` less **50 letter**`,
-		good: `${ e.success } **Done, The \`giveaway\` has been \`created\` successfully**`,
-		errorlink: `${ e.error } Please enter a valid **LINK OF GUILD** or \`something went wrong\``,
-		notinserver: `${ e.error } Hey! I am not in this **server**, you can \`add me\` by **[clicking here](https://discord.com/api/oauth2/authorize?client_id=598564396691750933&permissions=8&scope=applications.commands%20bot)**`,
-		view: `Giveaway Link:`
+		EXAMPLES: `/create duration:1m winners:1 prize:Нітро \n /create duration:1m winners:1 prize:Нітро channel:#general \n /create duration:1m winners:1 prize:Нітро required_role:@Vip`,
+		perms: `${ e.error } У вас немає права \`MANAGE_MESSAGES\`, Ви можете встановити роль для створення та управління розіграшами від вашого гільдії за допомогою наступної команди \`/setrole\`!.`,
+		duration: `${ e.error } Будь ласка, введіть припустимий \`time\`\n> Наприклад: \`1d (1 день)\`, \`1h (1 година)\`, \`1m (1 хвилина)\`!`,
+		argswinners: `${ e.error } Введіть \`число переможців!\`\n> Наприклад: \`1\`, \`2\`, **...**, \`10\` `,
+		prizee: `${ e.error } Будь ласка, введіть \`prize\` менше аніж **50 символів**`,
+		good: `${ e.success } **Готово, \`розіграш\` було успішно \`створено\`**`,
+		errorlink: `${ e.error } Будь ласка, введіть коректне **LINK OF GUILD** або \`щось пішло не так\``,
+		notinserver: `${ e.error } Хей! Я не з цього **сервера**, ви можете \`додати мене\` **[натиснувши тут](https://discord.com/api/oauth2/authorize?client_id=598564396691750933&permissions=8&scope=applications.commands%20bot)**`,
+		view: `Посилання на розіграш:`
 	},
 	drop: {
-		EXAMPLES: `/drop winners:1 prize:Steam Gift card \n /drop winners:1 prize:Steam Gift card channel:#general`,
-		dropstart: `${ e.success } **Done, The \`drop\` has been \`created\` successfully**`,
-		viewdrop: `Drop Link:`
+		EXAMPLES: `/drop winners:1 prize:Подарункова картка \n /drop winners:1 prize:Подарункова картка channel:#general`,
+		dropstart: `${ e.success } **Готово, \`розіграш\` було успішно \`створено\`**`,
+		viewdrop: `Посилання на drop:`
 	},
 	delete: {
-		EXAMPLES: `/delete => \`chose giveaway id\``,
-		option1: value => `Giveaway Prize: ${ value.prize }`,
-		option2: value => `Giveaway Id: ${ value.messageId }`,
-		fordelete: `${ e.for } **For Delete a Giveaway:**`,
-		done: giveawayid => `${ e.success } Done the giveaway is deleted \n${ e.hash } GiveawayID: \`${ giveawayid }\``,
-		errmod: `${ e.error } An error occurred!`
+		EXAMPLES: `/delete => \`виберіть id розіграшу\``,
+		option1: value => `Приз в розіграші: ${ value.prize }`,
+		option2: value => `Id розіграшу: ${ value.messageId }`,
+		fordelete: `${ e.for } **Для видалення розіграшу:**`,
+		done: giveawayid => `${ e.success } Розіграш видалено \n${ e.hash } GiveawayID: \`${ giveawayid }\``,
+		errmod: `${ e.error } Виникла помилка!`
 	},
 	edit: {
-		EXAMPLES: `/edit value:Winners new_value:5 => \`chose giveaway id\` \n /edit value:Prize new_value:5$ paypal => \`chose giveaway id\` \n /edit value:duration new_value:1d => \`chose giveaway id\``,
-		pr: messageID => `${ e.success } The giveaway prize has been updated. \n${ e.hash } GiveawayID: \`${ messageID }\``,
-		wi: messageID => `${ e.success } The giveaway winner has been updated. \n${ e.hash } GiveawayID: \`${ messageID }\``,
-		ti: messageID => `${ e.success } The giveaway duration has been updated. \n${ e.hash } GiveawayID: \`${ messageID }\``,
-		errmod: `${ e.error } An error occurred!`,
-		ending: ' Ending ',
-		foredit: `${ e.for } **For Edit a Giveaway:**`
+		EXAMPLES: `/edit value:Winners new_value:5 => \`введіть id розіграшу\` \n /edit value:Prize new_value:5$ paypal => \`введіть id розіграшу\` \n /edit value:duration new_value:1d => \`введіть id розіграшу\``,
+		pr: messageID => `${ e.success } Приз розіграшу був оновлений. \n${ e.hash } GiveawayID: \`${ messageID }\``,
+		wi: messageID => `${ e.success } Кількість переможців в розіграші була оновлена. \n${ e.hash } GiveawayID: \`${ messageID }\``,
+		ti: messageID => `${ e.success } Час розіграшу був оновлений. \n${ e.hash } GiveawayID: \`${ messageID }\``,
+		errmod: `${ e.error } Виникла помилка!`,
+		ending: ' Закінчення ',
+		foredit: `${ e.for } **Для редагування розіграшу:**`
 	},
 	end: {
-		EXAMPLES: `/end => \`chose giveaway id\``,
-		errmod: `${ e.error } An error occurred!`,
-		good: messageID => `${ e.success } The giveaway has been finished. \n${ e.hash } GiveawayID: \`${ messageID }\``,
-		forend: `${ e.for } **For End a Giveaway:**`
+		EXAMPLES: `/end => \`введіть id розіграшу\``,
+		errmod: `${ e.error } Виникла помилка!`,
+		good: messageID => `${ e.success } Розіграш був закінчений. \n${ e.hash } GiveawayID: \`${ messageID }\``,
+		forend: `${ e.for } **Для закінчення розіграшу:**`
 	},
 	pause: {
-		EXAMPLES: `/pause => \`chose giveaway id\``,
-		forpause: `${ e.for } **For Pause a Giveaway:**`,
-		done: messageID => `${ e.success } Done the giveaway is paused. \n${ e.hash } GiveawayID: \`${ messageID }\``,
-		errmod: `${ e.error } An error occurred!`
+		EXAMPLES: `/pause => \`введіть id розіграшу\``,
+		forpause: `${ e.for } **Для тимчасової зупинки розіграшу:**`,
+		done: messageID => `${ e.success } Готово, розіграш було тимчасово призупинено. \n${ e.hash } GiveawayID: \`${ messageID }\``,
+		errmod: `${ e.error } Виникла помилка!`
 	},
 	resume: {
-		EXAMPLES: `/resume => \`chose giveaway id\``,
-		autodes: `Auto play after:`,
-		forresume: `${ e.for } **For Resume a Giveaway:**`,
-		done: messageID => `${ e.success } Done the giveaway is resumed. \n${ e.hash } GiveawayID: \`${ messageID }\``,
-		errmod: `${ e.error } An error occurred!`
+		EXAMPLES: `/resume => \`введіть id розіграшу\``,
+		autodes: `Автоматично продовжити після:`,
+		forresume: `${ e.for } **Для продовження розіграшу:**`,
+		done: messageID => `${ e.success } Готово, розіграш продовжено. \n${ e.hash } GiveawayID: \`${ messageID }\``,
+		errmod: `${ e.error } Виникла помилка!`
 	},
 	reroll: {
-		EXAMPLES: `/reroll => \`chose giveaway id\``,
-		startat: `Start At`,
+		EXAMPLES: `/reroll => \`введіть id розіграшу\``,
+		startat: `Починається`,
 		forreroll: `${ e.for } **For Reroll a Giveaway:**`,
 		good: ':tada: New winner(s): {winners}! Congratulations!',
 		parts: `${ e.error } There weren't enough participants for this giveaway i can't choose!`,
@@ -91,56 +91,56 @@ module.exports = {
 		denied2: `**Your entry to [This Giveaway]({messageURL}) has been denied!** \n \n > **Please review the Giveaway Requirements!** ${ e.requirements }`,
 		dm1: `**Congratulations {winner}! ${ e.bot_logo }**`,
 		dm2: `・You Won ${ e.gift }:`,
-		dm3: `・Hosted By ${ e.host }:`,
-		winMessage: `${ e.bot_logo } | Congratulations, {winners}! You won **{this.prize}**!`
+		dm3: `・Від ${ e.host }:`,
+		winMessage: `${ e.bot_logo } | Вітаємо, {winners}! Ви виграли **{this.prize}**!`
 	},
 	setdm: {
 		EXAMPLES: `/setdm status:on \n /setdm status:off`,
-		doneon: `${ e.success } | direct winner message correctly activated${ e.online }!.`,
-		doneoff: `${ e.success } | direct winner message correctly deactivated${ e.dnd }!.`
+		doneon: `${ e.success } | пряме повідомлення про переможця правильно активовано${ e.online }!.`,
+		doneoff: `${ e.success } | повідомлення про прямого переможця коректно деактивовано${ e.dnd }!.`
 	},
 	setmention: {
 		EXAMPLES: `/setmention status:on \n /setmention status:off`,
-		mon: `${ e.success } | setmention command correctly activated${ e.online }!.`,
-		moff: `${ e.success } | setmention command correctly deactivated${ e.dnd }!`
+		mon: `${ e.success } | команда setmention правильно активована${ e.online }!.`,
+		moff: `${ e.success } | команда setmention правильно деактивована${ e.dnd }!`
 	},
 	setrole: {
 		EXAMPLES: `/setrole role role_value:@Manager \n /setrole status status_value:on \n /setrole status status_value:off`,
-		setrlebedore: `${ e.error } | Please choose a role before activating or deactivating it..`,
-		roledone: role => `${ e.success } | Role manager is set: ||<@&${ role.id }>||, And \`activated\``,
-		ron: `${ e.success } | Role manager correctly activated${ e.online }!`,
-		roff: `${ e.success } | Role manager correctly deactivated${ e.dnd }!`
+		setrlebedore: `${ e.error } | Будь ласка, виберіть роль, перш ніж активувати або деактивувати її..`,
+		roledone: role => `${ e.success } | Ролевий менеджер встановлений: ||<@&${ role.id }>||, та \`активований\``,
+		ron: `${ e.success } | Рольовий менеджер правильно активовано${ e.online }!`,
+		roff: `${ e.success } | Рольовий менеджер коректно деактивовано${ e.dnd }!`
 	},
 	config: {
 		EXAMPLES: `/configuration`,
-		configuration: 'Configuration:',
-		status: `status: `,
-		language: `language ${ e.lang }`,
+		configuration: 'Конфігурація:',
+		status: `статус: `,
+		language: `мова ${ e.lang }`,
 		mentiont: `setmention ${ e.mention }`,
 		setdmt: `setdm ${ e.dm }`,
 		setrolet: `setrole ${ e.role }`,
-		setrolede: `role: `,
-		norole: `\`No role\``
+		setrolede: `роль: `,
+		norole: `\`Роль відсутня\``
 	},
 	invite: {
 		EXAMPLES: `/invite`,
-		main: 'Hey, you want to invite our bot?',
-		disc: `> **You can invite our bot by pressing the \`Invite\` button below.**\n\n > **You can access the \`webiste\` links, \`support server\` and \`vote\`** \`\`\`through the buttons at the bottom\`\`\``
+		main: 'Агов, ви хочете запросити нашого бота?',
+		disc: `> **Ви можете запросити нашого бота, натиснувши кнопку \`Запросити\` нижче.**\n\n > **Ви можете отримати доступ до посилань \`веб-сайту\`, \`сервера підтримки\` та \`голосування\` **\`\`\`через кнопки внизу\`\`\``
 	},
 	ping: {
 		EXAMPLES: `/ping`,
-		pingmsg: (messagePing, apiPing, status) => `> **Status**: ${ status } \n > ${ e.ping } **Message ping**: \`${ messagePing }\` - ${ e.api } ** API ping**: \`${ apiPing }\``
+		pingmsg: (messagePing, apiPing, status) => `> **Статус**: ${ status } \n > ${ e.ping } **Пінгування повідомлення**: \`${ messagePing }\` - ${ e.api } **Пінг API**: \`${ apiPing }\``
 	},
 	stats: {
 		EXAMPLES: `/stats`,
-		title: 'ManageGift\'s Information:',
-		creator: `${ e.owner } • __Creator:__`,
-		stats: `${ e.stats } • __Statistics:__`,
-		stat: '`Servers:`',
-		set: '`Users:`',
-		ver: `${ e.ver } • __Changelog:__`,
+		title: 'ManageGift\'s Інформація:',
+		creator: `${ e.owner } • Розробник:__`,
+		stats: `${ e.stats } • Статистика:__`,
+		stat: '`Серверів:`',
+		set: '`Користувачів:`',
+		ver: `${ e.ver } • __Журнал змін:__`,
 		ram: `${ e.ram } • __RAM__`,
-		on: `${ e.online } • __Uptime__`,
+		on: `${ e.online } • __Аптайм__`,
 		startat: '**Started At**: ',
 		for: '**online for** ',
 		moreinfo: `${ e.info } • __MoreInfos:__`,
@@ -201,41 +201,41 @@ module.exports = {
 	owner: {
 		tit: `${ e.page } Categories: \`Owner\``,
 		ownerfind: '```fix\nHere you can find all Owner Commands:```',
-		blacklistt: `> \`Add or remove or get list, users & guilds in blacklist\``
+		blacklistt: `> \`Додавання, видалення або отримання списку, користувачів і гільдій в чорному списку\``
 	},
-	otherUser: `${ e.error } You cannot **edit**, **end** or **delete** this \`giveaway\`, since you are not the \`host\`!`,
-	lang: { perms: `${ e.error } You do not have permission \`MANAGE_MESSAGES\`` },
-	lastchance: { content: `${ e.warning } **LAST CHANCE TO ENTER !** ${ e.warning }` },
+	otherUser: `${ e.error } Ви не можете **редагувати**, **закінчувати** чи **видаляти** цей \`розіграш\`, тому що ви не є \`хостом\` поточного розіграшу!`,
+	lang: { perms: `${ e.error } У вас немає права \`MANAGE_MESSAGES\`` },
+	lastchance: { content: `${ e.warning } **ОСТАННІЙ ШАНС ДЛЯ ПРИЄДНАННЯ!** ${ e.warning }` },
 	pauseoptions: {
-		content: `${ e.pause } **THIS GIVEAWAY IS PAUSED !** ${ e.pause }`,
-		autostart: autotime => `\`Auto Start After:\` ${ autotime }`
+		content: `${ e.pause } **РОЗІГРАШ ПРИЗУПИНЕНО!** ${ e.pause }`,
+		autostart: autotime => `\`Продовження розіграшу після:\` ${ autotime }`
 	},
 	already: {
-		enb: `${ e.afk } | An error occurred. This command may already be \`enabled\``,
-		dis: `${ e.afk } | An error occurred. This command may already be \`disabled\``
+		enb: `${ e.afk } | Сталася помилка. Ця команда вже може бути \`ввімкнена\``,
+		dis: `${ e.afk } | Сталася помилка. Ця команда вже може бути \`вимкнена\``
 	},
-	selectmenu: { choose: `Please Choose a Giveaway` },
+	selectmenu: { choose: `Будь ласка, виберіть розіграш` },
 	collector: {
-		time: `${ e.timeout }**Time is out! try again.**`,
-		btntime: `Time is out!`
+		time: `${ e.timeout }**Час вийшов! Спробуйте знову.**`,
+		btntime: `Час вийшов!`
 	},
 	cancel: {
-		option1: `Cancel`,
-		option2: `Cancel the selection`,
-		cancelled: `${ e.success } Cancelled`
+		option1: `Скасувати`,
+		option2: `Скасувати обране`,
+		cancelled: `${ e.success } Скасовано`
 	},
 	cmd: {
-		cooldown: `${ e.error } | **You must wait \`4 second(s)\` ${ e.timeout } to be able to run this command again!**`,
-		owneronly: `${ e.error } | Only the owner of ManageGift can do these commands!`,
-		botperm: `${ e.error } | I don't have **\`Administrator\`** permission to execute this command.`
+		cooldown: `${ e.error } | **Ви повинні зачекати \`4 секунди\` ${ e.timeout } щоб мати можливість запустити цю команду знову!**`,
+		owneronly: `${ e.error } | Тільки власник ManageGift може виконувати ці команди!`,
+		botperm: `${ e.error } | Я не маю права **\`Адміністратор\`** для виконання цієї команди.`
 	},
 	blacklist: {
-		user: ureason => `${ e.warning } **You cannot use ManageGift Bot commands** \n \`\`\`Reason: ${ ureason }\`\`\` \n**If you think this is a mistake or something like that, do not hesitate and submit your objection in the [Support Server](https://discord.gg/7XfV4Md)**`,
-		guild: sreason => `${ e.warning } **This server is in the blacklist, you cannot use any command on it**\n \`\`\`Reason: ${ sreason }\`\`\` \n**If you think this is a mistake or something like that, do not hesitate and submit your objection in the [Support Server](https://discord.gg/7XfV4Md)**`
+		user: ureason => `${ e.warning } **Ви не можете використовувати команди ManageGift Bot** \n \`\`\`Причина: ${ ureason }\`\`\` \n**Якщо ви думаєте, що це помилка або щось таке, не соромтеся і відправте своє заперечення в [підтримку](https://discord.gg/7XfV4Md)**`,
+		guild: sreason => `${ e.warning } **Цей сервер знаходиться в чорному списку, ви не можете використовувати будь-яку команду**\n \`\`\`Причина: ${ sreason }\`\`\` \n**Якщо ви думаєте, що це помилка або щось таке, не соромтеся і відправте своє заперечення в [підтримку](https://discord.gg/7XfV4Md)**`
 	},
-	enterserver: { thx: 'Thank you for adding me to your guild !' },
+	enterserver: { thx: 'Дякуємо, що додали мене до вашої гільдії!' },
 	moved: {
-		update: `${ e.news } Update!`,
-		slash: 'From version `v4.0.0` onwards **ManageGift** moved to **slash commands**! Please type `/help` to see all commands!'
+		update: `${ e.news } Оновлення!`,
+		slash: 'З версії `v4.0.0`, **ManageGiftt** переписаний на **слєш-команди**! Будь ласка, введіть /help для перегляду всіх команд!'
 	}
 };
