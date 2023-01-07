@@ -3,26 +3,26 @@
 const {prefix, owner} = require('../config.js'), emojis = require('../emojis.json'), e = emojis;
 module.exports = {
 	create: {
-		EXAMPLES: `/create duration:1m winners:1 prize:Nitro \n /create duration:1m winners:1 prize:Nitro channel:#general \n /create duration:1m winners:1 prize:Nitro required_role:@Vip`,
-		perms: `${ e.error } You do not have permission \`MANAGE_MESSAGES\`, You can set specify role to create & manage giveaways from your guild By using the following command \`/setrole\`!.`,
-		duration: `${ e.error } Type a valid \`time\` please!\n> Ex: \`1d (1 day)\`, \`1h (1 hour)\`, \`1m (1 minute)\`!`,
-		argswinners: `${ e.error } Type the \`number of winners!\`\n> Ex: \`1\`, \`2\` **...** \`10\` `,
-		prizee: `${ e.error } Please put a \`prize\` less **50 letter**`,
-		good: `${ e.success } **Done, The \`giveaway\` has been \`created\` successfully**`,
-		errorlink: `${ e.error } Please enter a valid **LINK OF GUILD** or \`something went wrong\``,
-		notinserver: `${ e.error } Hey! I am not in this **server**, you can \`add me\` by **[clicking here](https://discord.com/api/oauth2/authorize?client_id=598564396691750933&permissions=8&scope=applications.commands%20bot)**`,
-		view: `Giveaway Link:`
+		EXAMPLES: `/create duration:1m winners:1 prize:Нітро \n /create duration:1m winners:1 prize:Нітро channel:#general \n /create duration:1m winners:1 prize:Нітро required_role:@Vip`,
+		perms: `${ e.error } У вас немає права \`MANAGE_MESSAGES\`, Ви можете встановити роль для створення та управління розіграшами від вашого гільдії за допомогою наступної команди \`/setrole\`!.`,
+		duration: `${ e.error } Будь ласка, введіть припустимий \`time\`\n> Наприклад: \`1d (1 день)\`, \`1h (1 година)\`, \`1m (1 хвилина)\`!`,
+		argswinners: `${ e.error } Введіть \`число переможців!\`\n> Наприклад: \`1\`, \`2\`, **...**, \`10\` `,
+		prizee: `${ e.error } Будь ласка, введіть \`prize\` менше аніж **50 символів**`,
+		good: `${ e.success } **Готово, \`розіграш\` було успішно \`створено\`**`,
+		errorlink: `${ e.error } Будь ласка, введіть коректне **LINK OF GUILD** або \`щось пішло не так\``,
+		notinserver: `${ e.error } Хей! Я не з цього **сервера**, ви можете \`додати мене\` **[натиснувши тут](https://discord.com/api/oauth2/authorize?client_id=598564396691750933&permissions=8&scope=applications.commands%20bot)**`,
+		view: `Посилання на розіграш:`
 	},
 	drop: {
-		EXAMPLES: `/drop winners:1 prize:Steam Gift card \n /drop winners:1 prize:Steam Gift card channel:#general`,
-		dropstart: `${ e.success } **Done, The \`drop\` has been \`created\` successfully**`,
-		viewdrop: `Drop Link:`
+		EXAMPLES: `/drop winners:1 prize:Подарункова картка \n /drop winners:1 prize:Подарункова картка channel:#general`,
+		dropstart: `${ e.success } **Готово, \`розіграш\` було успішно \`створено\`**`,
+		viewdrop: `Посилання на drop:`
 	},
 	delete: {
-		EXAMPLES: `/delete => \`chose giveaway id\``,
-		option1: value => `Giveaway Prize: ${ value.prize }`,
-		option2: value => `Giveaway Id: ${ value.messageId }`,
-		fordelete: `${ e.for } **For Delete a Giveaway:**`,
+		EXAMPLES: `/delete => \`виберіть id розіграшу\``,
+		option1: value => `Приз в розіграші: ${ value.prize }`,
+		option2: value => `Id розіграшу: ${ value.messageId }`,
+		fordelete: `${ e.for } **Для видалення розіграшу:**`,
 		done: giveawayid => `${ e.success } Done the giveaway is deleted \n${ e.hash } GiveawayID: \`${ giveawayid }\``,
 		errmod: `${ e.error } An error occurred!`
 	},
